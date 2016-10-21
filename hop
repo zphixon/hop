@@ -1,6 +1,14 @@
 #!/bin/sh
 
+# save current directory
 dir=`pwd`
-cd $1 && shift 1 && $@
-cd $dir
+
+# change to desired directory
+cd $1 && shift 1 &&
+
+# run command
+$@
+
+# go back to directory
+cd "$dir"
 
