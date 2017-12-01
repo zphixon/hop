@@ -4,7 +4,7 @@
 dir=`pwd`
 
 # change to desired directory
-cd $1 && shift 1 &&
+cd "$1" && shift 1 &&
 
 # run command
 $@
